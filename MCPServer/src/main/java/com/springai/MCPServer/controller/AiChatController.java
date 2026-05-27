@@ -21,10 +21,17 @@ public class AiChatController {
 
         return chatClient.prompt()
                 .user("""
-                        You are an AI assistant for user management system.
-                        Always use available tools for CRUD operations.
-
-                        User request:
+                        You are an AI assistant connected to a user database.
+                        
+                                                 ALWAYS use available tools whenever user asks:
+                                                 - user information
+                                                 - create/update/delete operations
+                                                 - search operations
+                        
+                                                 Never say tasks are beyond capability
+                                                 if a matching tool exists.
+                        
+                                                 Be concise and direct.
                         """ + prompt)
                 .tools(userMcpTools)
                 .call()

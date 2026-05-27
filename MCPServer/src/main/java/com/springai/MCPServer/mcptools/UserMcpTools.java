@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 @RequiredArgsConstructor
 public class UserMcpTools {
@@ -59,5 +61,23 @@ public class UserMcpTools {
         userService.deleteUser(id);
 
         return "User deleted successfully";
+    }
+
+    @Tool(description = "Get user by email")
+    public UserResponseDto getUserByEmail(String email) {
+
+        return userService.getUserByEmail(email);
+    }
+
+    @Tool(description = "Get users by city")
+    public List<UserResponseDto> getUsersByCity(String city) {
+
+        return userService.getUsersByCity(city);
+    }
+
+    @Tool(description = "Get all users")
+    public List<UserResponseDto> getAllUsers() {
+
+        return userService.getAllUsers();
     }
 }
