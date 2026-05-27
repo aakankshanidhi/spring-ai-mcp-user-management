@@ -11,6 +11,7 @@ An AI-powered User Management System built using:
 - DTO Architecture
 - Validation
 - Global Exception Handling
+- Redis cache
 
 ---
 
@@ -24,6 +25,7 @@ An AI-powered User Management System built using:
 - DTO + Validation
 - Swagger API documentation
 - MCP tool calling with Spring AI
+- Caching mechanism
 
 ---
 
@@ -35,6 +37,7 @@ An AI-powered User Management System built using:
 - PostgreSQL
 - Maven
 - Groq LLM API
+- Redis
 
 ---
 
