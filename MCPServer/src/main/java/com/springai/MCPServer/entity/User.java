@@ -24,4 +24,6 @@ public class User {
     private Integer age;
 
     private String city;
+
+    private String password;
 }

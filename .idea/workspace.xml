@@ -7,15 +7,9 @@
     <list default="true" id="b7da098b-31ba-46f9-8897-efc0f8a2df4e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MCPServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/McpServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/McpServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/AiChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/AiChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/dto/UserResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/dto/UserResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/mcptools/UserMcpTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/mcptools/UserMcpTools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/dto/UserRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/dto/UserRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +86,8 @@
       <updated>1779792831525</updated>
       <workItem from="1779792833046" duration="2210000" />
       <workItem from="1779795636535" duration="10232000" />
-      <workItem from="1779868374969" duration="5589000" />
+      <workItem from="1779868374969" duration="6002000" />
+      <workItem from="1779951272655" duration="1554000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,7 @@ import com.springai.MCPServer.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,11 +18,18 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public UserResponseDto createUser(UserRequestDto dto) {
 
         User user = new User();
+
+        user.setPassword(
+                passwordEncoder.encode(
+                        dto.getPassword()
+                )
+        );
 
         user.setName(dto.getName());
         user.setEmail(dto.getEmail());
