@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07ce5163-e9d3-4504-8b78-61eba7fc5fb9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/AiChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/AiChatController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,10 +30,10 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="3ELQ3VHMeYG1ZlRVSGVVtpizDqD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -49,6 +47,7 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.McpServerApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
@@ -81,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1779955177963</updated>
-      <workItem from="1779955182712" duration="3368000" />
+      <workItem from="1779955182712" duration="4316000" />
     </task>
     <servers />
   </component>
