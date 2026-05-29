@@ -4,42 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ce5163-e9d3-4504-8b78-61eba7fc5fb9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/McpServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/config/AiConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/config/AiMemoryConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/AiChatController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/AuthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/dto/AuthResponseDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/dto/LoginRequestDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/dto/UserRequestDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/dto/UserResponseDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/exception/GlobalExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/exception/ResourceNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/mcptools/UserMcpTools.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/security/JwtAuthFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/security/JwtUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/AuthService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/CustomUserDetailsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/JwtService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/test/java/com/springai/MCPServer/McpServerApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="07ce5163-e9d3-4504-8b78-61eba7fc5fb9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,6 +79,7 @@
       <updated>1779955177963</updated>
       <workItem from="1779955182712" duration="4316000" />
       <workItem from="1780048042152" duration="1409000" />
+      <workItem from="1780049769433" duration="828000" />
     </task>
     <servers />
   </component>
