@@ -6,7 +6,39 @@
   <component name="ChangeListManager">
     <list default="true" id="07ce5163-e9d3-4504-8b78-61eba7fc5fb9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/AiChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/AiChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/McpServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/config/AiConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/config/AiMemoryConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/AiChatController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/dto/AuthResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/dto/LoginRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/dto/UserRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/dto/UserResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/exception/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/mcptools/UserMcpTools.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/security/JwtAuthFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/security/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/CustomUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/java/com/springai/MCPServer/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCPServer/src/test/java/com/springai/MCPServer/McpServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,31 +71,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.McpServerApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.McpServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="McpServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="MCPServer" />
@@ -81,6 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1779955177963</updated>
       <workItem from="1779955182712" duration="4316000" />
+      <workItem from="1780048042152" duration="1409000" />
     </task>
     <servers />
   </component>

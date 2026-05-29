@@ -1,51 +1,114 @@
 # Spring AI MCP User Management System
 
-An AI-powered User Management System built using:
+An AI-powered User Management System built using Spring Boot, Spring AI, PostgreSQL, Redis, and Groq LLM APIs.
 
-* Spring Boot
-* Spring AI
-* Groq API
-* PostgreSQL
-* Redis
-* JWT Authentication
-* MCP Tool Calling
-* Swagger/OpenAPI
-* DTO Architecture
-* Validation
-* AI Chat Memory
+This project allows users to interact with the database using natural language prompts through AI tool calling.
 
 ---
 
 # Features
 
-## Core Backend Features
+## User Management APIs
 
-* CRUD operations for users
-* Layered architecture
-* DTO-based request/response handling
-* Global exception handling
-* Input validation using Jakarta Validation
-* Swagger/OpenAPI documentation
-* JWT-based authentication & authorization
-* Password encryption using BCrypt
+* Create User
+* Get User By ID
+* Get User By Name
+* Update User
+* Delete User
 
 ---
 
-## AI Features
+## AI-Powered MCP Tool Calling
 
-* AI-powered database interaction
-* Natural language prompt handling
-* MCP tool calling with Spring AI
-* AI memory with conversation tracking
-* Context-aware AI responses
-* Multi-tool AI interaction support
+Integrated Spring AI with Groq API to allow natural language interaction.
+
+Example prompts:
+
+```text
+get user with id 2
+
+get user with name Rahul
+
+delete user with id 3
+
+update user with id 1 city Bangalore
+
+add user with name Ryan email ryan@gmail.com age 25 city Delhi password 1234
+```
 
 ---
 
-## Redis Features
+## JWT Authentication
 
-* Redis caching for optimized API performance
-* Cache-based user retrieval
+Implemented secure JWT-based authentication.
+
+Features:
+
+* User Registration
+* Login API
+* JWT Token Generation
+* Protected APIs
+* Stateless Authentication
+
+---
+
+## DTO Architecture
+
+Implemented:
+
+* UserRequestDto
+* UserResponseDto
+
+Benefits:
+
+* Cleaner API structure
+* Better security
+* Validation support
+* Separation of concerns
+
+---
+
+## Validation & Global Exception Handling
+
+Implemented:
+
+* Request validation using Jakarta Validation
+* Global exception handling using `@RestControllerAdvice`
+
+Handled exceptions:
+
+* Resource Not Found
+* Validation Errors
+* AI Tool Errors
+* General Exceptions
+
+---
+
+## Redis Caching
+
+Integrated Redis caching for optimized performance.
+
+Cached APIs:
+
+* Get User By ID
+* Get User By Name
+
+Benefits:
+
+* Faster API responses
+* Reduced database load
+
+---
+
+## Swagger Documentation
+
+Swagger UI integrated for API testing.
+
+Swagger URL:
+
+```text
+http://localhost:8080/swagger-ui/index.html
+```
 
 ---
 
@@ -54,135 +117,84 @@ An AI-powered User Management System built using:
 * Java 17
 * Spring Boot 3.4.5
 * Spring AI
-* Spring Security
+* Groq API
 * PostgreSQL
-* Redis
-* Groq LLM API
+* Redis / Memurai
+* Spring Security + JWT
+* Spring Data JPA
 * Maven
+* Swagger OpenAPI
+* Lombok
 
 ---
 
-# Implemented AI Tools
-
-* Get user by ID
-* Get user by name
-* Create user
-* Update user
-* Delete user
-* Get all users
-* Get users by city
-
----
-
-# Example AI Prompts
-
-* get user with id 2
-* get user Rahul
-* what is his city
-* add user named Ryan from Delhi
-* update user 3 city to Noida
-* delete user with id 5
-* show users from Delhi
-
----
-
-# AI Memory Example
-
-Conversation ID: `1`
-
-Prompt 1:
+# Project Structure
 
 ```text
-get user Rahul
-```
+src/main/java/com/springai/MCPServer
 
-Prompt 2:
-
-```text
-what is his city
-```
-
-The AI remembers previous conversation context using Spring AI chat memory.
-
----
-
-# Authentication Flow
-
-## Register User
-
-```http
-POST /users
-```
-
-## Login
-
-```http
-POST /auth/login
-```
-
-Returns JWT token.
-
-## Access Protected APIs
-
-Pass token in header:
-
-```text
-Authorization: Bearer YOUR_TOKEN
+├── config
+├── controller
+├── dto
+├── entity
+├── exception
+├── repository
+├── security
+├── service
+└── tools
 ```
 
 ---
 
-# API Documentation
+# Setup Instructions
 
-Swagger UI:
-
-```text
-http://localhost:8080/swagger-ui/index.html
-```
-
----
-
-# Run Project
-
-## Clone Repository
+## 1. Clone Repository
 
 ```bash
-git clone <repo-url>
+git clone <your-repo-url>
 ```
 
 ---
 
-## Configure PostgreSQL
+## 2. Configure PostgreSQL
+
+Create database:
+
+```sql
+CREATE DATABASE userdb;
+```
 
 Update `application.properties`:
 
 ```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/your_db
+spring.datasource.url=jdbc:postgresql://localhost:5432/userdb
 spring.datasource.username=postgres
 spring.datasource.password=your_password
 ```
 
 ---
 
-## Configure Redis
-
-```properties
-spring.data.redis.host=localhost
-spring.data.redis.port=6379
-```
-
----
-
-## Add Groq API Key
+## 3. Configure Groq API Key
 
 ```properties
 spring.ai.openai.api-key=YOUR_GROQ_API_KEY
 spring.ai.openai.base-url=https://api.groq.com/openai
+spring.ai.openai.chat.options.model=llama-3.3-70b-versatile
 ```
 
 ---
 
-## Run Application
+## 4. Configure Redis
+
+Start Redis/Memurai server on port:
+
+```text
+6379
+```
+
+---
+
+## 5. Run Application
 
 ```bash
 mvn spring-boot:run
@@ -190,16 +202,61 @@ mvn spring-boot:run
 
 ---
 
+# Authentication APIs
+
+## Register User
+
+POST
+
+```text
+/api/users
+```
+
+Request Body:
+
+```json
+{
+  "name": "Rahul",
+  "email": "rahul@gmail.com",
+  "password": "1234",
+  "age": 26,
+  "city": "Guwahati"
+}
+```
+
+---
+
+## Login
+
+POST
+
+```text
+/auth/login
+```
+
+Request Body:
+
+```json
+{
+  "email": "rahul@gmail.com",
+  "password": "1234"
+}
+```
+
+Returns JWT token.
+
+---
+
 # Future Enhancements
 
-* Vector Database + Embeddings
-* Semantic Search
+* Role-Based Authentication
+* Pagination & Sorting
+* Dockerization
+* Unit Testing
+* AI Chat Memory
+* Vector Database Integration
 * MCP Tool Chaining
-* RAG-based AI Retrieval
-* Docker Deployment
-* Kubernetes Deployment
-* CI/CD Pipeline
-* Conversation persistence in Redis/PostgreSQL
+* Cloud Deployment
 
 ---
 
