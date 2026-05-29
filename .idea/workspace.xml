@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07ce5163-e9d3-4504-8b78-61eba7fc5fb9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springai/MCPServer/McpServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springai/MCPServer/McpServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springai/MCPServer/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springai/MCPServer/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +84,7 @@
       <updated>1779955177963</updated>
       <workItem from="1779955182712" duration="4316000" />
       <workItem from="1780048042152" duration="1409000" />
-      <workItem from="1780049769433" duration="1924000" />
+      <workItem from="1780049769433" duration="2864000" />
     </task>
     <servers />
   </component>
