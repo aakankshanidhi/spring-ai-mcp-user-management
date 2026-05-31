@@ -80,4 +80,9 @@ public class UserMcpTools {
 
         return userService.getAllUsers();
     }
+    @Tool(description = "Get user by name")
+    public UserResponseDto getUserByName(String name) {
+
+        return userService.getUserByName(name);
+    }
 }
