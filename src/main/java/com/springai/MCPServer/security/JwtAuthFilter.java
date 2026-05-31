@@ -77,12 +77,11 @@ public class  JwtAuthFilter
     }
 
     @Override
-    protected boolean shouldNotFilter(HttpServletRequest request)
-            throws ServletException {
+    protected boolean shouldNotFilter(HttpServletRequest request) {
 
         String path = request.getServletPath();
 
-        return path.equals("/users")
+        return path.equals("/api/users")
                 || path.startsWith("/auth")
                 || path.startsWith("/swagger-ui")
                 || path.startsWith("/v3/api-docs");
