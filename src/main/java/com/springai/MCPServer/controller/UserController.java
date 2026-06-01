@@ -24,7 +24,7 @@ public class UserController {
         return userService.createUser(dto);
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<UserResponseDto> getAllUsers() {
 
         System.out.println("Entered getAllUsers");
