@@ -32,6 +32,10 @@ public class  JwtAuthFilter
             FilterChain filterChain)
             throws ServletException, IOException {
 
+
+        System.out.println("PATH = " + request.getServletPath());
+        System.out.println("AUTH HEADER = " + request.getHeader("Authorization"));
+
         String authHeader =
                 request.getHeader("Authorization");
 
@@ -44,6 +48,7 @@ public class  JwtAuthFilter
             token = authHeader.substring(7);
 
             email = jwtService.extractEmail(token);
+            System.out.println("EMAIL = " + email);
         }
 
         if(email != null
