@@ -27,12 +27,7 @@ public class UserController {
     @GetMapping("/all")
     public List<UserResponseDto> getAllUsers() {
 
-        System.out.println("Entered getAllUsers");
-
         List<UserResponseDto> users = userService.getAllUsers();
-
-        System.out.println("Users fetched = " + users.size());
-
         return users;
     }
 
