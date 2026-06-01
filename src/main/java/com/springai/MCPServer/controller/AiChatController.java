@@ -25,33 +25,21 @@ public class AiChatController {
             @RequestParam String conversationId) {
 
         return chatClient.prompt()
-
-                .advisors(
-                        MessageChatMemoryAdvisor.builder(chatMemory)
-                                .conversationId(conversationId)
-                                .build()
-                )
-
                 .user("""
-                        You are an AI assistant connected to a user database.
+                You are an AI assistant connected to a user database.
 
-                        ALWAYS use available tools whenever user asks:
-                        - user information
-                        - create/update/delete operations
-                        - search operations
+                RULES:
+                - Always use tools when a matching tool exists.
+                - After calling a tool, return the actual tool result.
+                - Do not describe the tool call.
+                - Do not explain that you used a tool.
+                - Do not say "you have accessed information".
+                - Show the retrieved data directly.
 
-                        Never say tasks are beyond capability
-                        if a matching tool exists.
-
-                        Use previous conversation context.
-
-                        Be concise and direct.
-                        """ + prompt)
-
+                User request:
+                """ + prompt)
                 .tools(userMcpTools)
-
                 .call()
-
                 .content();
     }
 }
