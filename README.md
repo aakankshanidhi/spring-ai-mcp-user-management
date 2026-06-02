@@ -1,8 +1,8 @@
 # Spring AI MCP User Management System
 
-An AI-powered User Management System built using Spring Boot, Spring AI, PostgreSQL, Redis, and Groq LLM APIs.
+An AI-powered User Management System built using Spring Boot, Spring AI, Groq LLM APIs, JWT Authentication, MCP Tool Calling, AI Chat Memory, PostgreSQL, Redis, and Railway Deployment.
 
-This project allows users to interact with the database using natural language prompts through AI tool calling.
+The application allows users to manage database records using both REST APIs and natural language prompts through AI-powered tool calling.
 
 ---
 
@@ -11,8 +11,11 @@ This project allows users to interact with the database using natural language p
 ## User Management APIs
 
 * Create User
+* Get All Users
 * Get User By ID
 * Get User By Name
+* Get User By Email
+* Get Users By City
 * Update User
 * Delete User
 
@@ -20,14 +23,31 @@ This project allows users to interact with the database using natural language p
 
 ## AI-Powered MCP Tool Calling
 
-Integrated Spring AI with Groq API to allow natural language interaction.
+Integrated Spring AI with Groq API to enable natural language interaction with the database.
 
-Example prompts:
+Supported AI Operations:
+
+* Get User By ID
+* Get User By Name
+* Get User By Email
+* Get Users By City
+* Get All Users
+* Create User
+* Update User
+* Delete User
+
+Example Prompts:
 
 ```text
 get user with id 2
 
 get user with name Rahul
+
+get users from Delhi
+
+get user with email rahul@gmail.com
+
+show all users
 
 delete user with id 3
 
@@ -35,6 +55,33 @@ update user with id 1 city Bangalore
 
 add user with name Ryan email ryan@gmail.com age 25 city Delhi password 1234
 ```
+
+---
+
+## AI Chat Memory
+
+Implemented conversation-based memory using Spring AI Chat Memory.
+
+Features:
+
+* Maintains context across multiple prompts
+* Supports conversation-specific memory
+* Uses Conversation ID for session tracking
+* Enables follow-up questions
+
+Example:
+
+```text
+Conversation ID = abc123
+
+Prompt 1:
+Get user with name Khushi
+
+Prompt 2:
+What is her city?
+```
+
+The AI remembers the previously discussed user within the same conversation.
 
 ---
 
@@ -49,6 +96,13 @@ Features:
 * JWT Token Generation
 * Protected APIs
 * Stateless Authentication
+* Secure AI Endpoints
+
+Protected APIs require:
+
+```text
+Authorization: Bearer <jwt_token>
+```
 
 ---
 
@@ -58,6 +112,8 @@ Implemented:
 
 * UserRequestDto
 * UserResponseDto
+* LoginRequestDto
+* AuthResponseDto
 
 Benefits:
 
@@ -73,13 +129,15 @@ Benefits:
 Implemented:
 
 * Request validation using Jakarta Validation
-* Global exception handling using `@RestControllerAdvice`
+* Global exception handling using @RestControllerAdvice
 
 Handled exceptions:
 
 * Resource Not Found
 * Validation Errors
+* Authentication Errors
 * AI Tool Errors
+* AI Rate Limit Errors
 * General Exceptions
 
 ---
@@ -92,6 +150,7 @@ Cached APIs:
 
 * Get User By ID
 * Get User By Name
+* Get User By Email
 
 Benefits:
 
@@ -104,10 +163,35 @@ Benefits:
 
 Swagger UI integrated for API testing.
 
-Swagger URL:
+Local:
 
 ```text
 http://localhost:8080/swagger-ui/index.html
+```
+
+---
+
+## Railway Deployment
+
+Application successfully deployed on Railway.
+
+Cloud Features:
+
+* Public API access
+* H2 database support for deployment
+* Environment variable configuration
+* Groq API integration
+
+Deployment URL:
+
+```text
+https://spring-ai-mcp-user-management-production.up.railway.app
+```
+
+Swagger URL:
+
+```text
+https://spring-ai-mcp-user-management-production.up.railway.app/swagger-ui/index.html
 ```
 
 ---
@@ -118,12 +202,15 @@ http://localhost:8080/swagger-ui/index.html
 * Spring Boot 3.4.5
 * Spring AI
 * Groq API
+* Spring Security
+* JWT Authentication
 * PostgreSQL
+* H2 Database
 * Redis / Memurai
-* Spring Security + JWT
 * Spring Data JPA
 * Maven
 * Swagger OpenAPI
+* Railway
 * Lombok
 
 ---
@@ -138,10 +225,11 @@ src/main/java/com/springai/MCPServer
 ├── dto
 ├── entity
 ├── exception
+├── mcptools
 ├── repository
 ├── security
 ├── service
-└── tools
+└── memory
 ```
 
 ---
@@ -151,20 +239,14 @@ src/main/java/com/springai/MCPServer
 ## 1. Clone Repository
 
 ```bash
-git clone <your-repo-url>
+git clone <your-repository-url>
 ```
 
 ---
 
-## 2. Configure PostgreSQL
+## 2. Configure Database
 
-Create database:
-
-```sql
-CREATE DATABASE userdb;
-```
-
-Update `application.properties`:
+### PostgreSQL (Local)
 
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/userdb
@@ -172,9 +254,18 @@ spring.datasource.username=postgres
 spring.datasource.password=your_password
 ```
 
+### H2 (Cloud Deployment)
+
+```properties
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+```
+
 ---
 
-## 3. Configure Groq API Key
+## 3. Configure Groq API
 
 ```properties
 spring.ai.openai.api-key=YOUR_GROQ_API_KEY
@@ -186,10 +277,9 @@ spring.ai.openai.chat.options.model=llama-3.3-70b-versatile
 
 ## 4. Configure Redis
 
-Start Redis/Memurai server on port:
-
-```text
-6379
+```properties
+spring.data.redis.host=localhost
+spring.data.redis.port=6379
 ```
 
 ---
@@ -212,18 +302,6 @@ POST
 /api/users
 ```
 
-Request Body:
-
-```json
-{
-  "name": "Rahul",
-  "email": "rahul@gmail.com",
-  "password": "1234",
-  "age": 26,
-  "city": "Guwahati"
-}
-```
-
 ---
 
 ## Login
@@ -234,29 +312,49 @@ POST
 /auth/login
 ```
 
-Request Body:
+Returns:
 
 ```json
 {
-  "email": "rahul@gmail.com",
-  "password": "1234"
+  "token": "JWT_TOKEN"
 }
 ```
 
-Returns JWT token.
+---
+
+# AI Endpoint
+
+GET
+
+```text
+/ai
+```
+
+Parameters:
+
+```text
+prompt
+conversationId
+```
+
+Example:
+
+```text
+/ai?conversationId=abc123&prompt=get user with id 1
+```
 
 ---
 
 # Future Enhancements
 
-* Role-Based Authentication
+* Vector Database Integration
+* Embeddings
+* MCP Tool Chaining
+* Role-Based Access Control (RBAC)
 * Pagination & Sorting
 * Dockerization
-* Unit Testing
-* AI Chat Memory
-* Vector Database Integration
-* MCP Tool Chaining
-* Cloud Deployment
+* Unit & Integration Testing
+* Kubernetes Deployment
 
 ---
 
