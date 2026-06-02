@@ -229,7 +229,6 @@ src/main/java/com/springai/MCPServer
 ├── repository
 ├── security
 ├── service
-└── memory
 ```
 
 ---
