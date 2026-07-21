@@ -29,7 +29,7 @@ public class SwaggerConfig {
 
                 .servers(List.of(
                         new Server()
-                                .url("https://spring-ai-mcp-user-management-production.up.railway.app")
+                                .url("https://spring-ai-mcp-user-management.onrender.com")
                 ))
 
                 .addSecurityItem(
