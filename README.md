@@ -1,8 +1,34 @@
 # Spring AI MCP User Management System
 
-An AI-powered User Management System built using Spring Boot, Spring AI, Groq LLM APIs, JWT Authentication, MCP Tool Calling, AI Chat Memory, PostgreSQL, Redis, and Railway Deployment.
+An AI-powered User Management System built using **Spring Boot**, **Spring AI**, **Groq LLM APIs**, **JWT Authentication**, **MCP Tool Calling**, **AI Chat Memory**, **PostgreSQL**, **Redis Caching**, **Docker**, and **Render**.
 
-The application allows users to manage database records using both REST APIs and natural language prompts through AI-powered tool calling.
+The application enables users to manage database records using both traditional REST APIs and natural language prompts through AI-powered tool calling.
+
+---
+
+# 🚀 Live Demo
+
+### Application
+
+https://spring-ai-mcp-user-management.onrender.com
+
+### Swagger UI
+
+https://spring-ai-mcp-user-management.onrender.com/swagger-ui/index.html
+
+---
+
+# ✨ Project Highlights
+
+- AI-powered User Management using Spring AI & Groq LLM
+- Natural Language Database Operations via MCP Tool Calling
+- JWT Authentication & Spring Security
+- AI Conversation Memory
+- REST APIs with DTO Architecture
+- Global Exception Handling
+- Swagger/OpenAPI Documentation
+- Dockerized Spring Boot Application
+- Live Cloud Deployment on Render
 
 ---
 
@@ -10,14 +36,14 @@ The application allows users to manage database records using both REST APIs and
 
 ## User Management APIs
 
-* Create User
-* Get All Users
-* Get User By ID
-* Get User By Name
-* Get User By Email
-* Get Users By City
-* Update User
-* Delete User
+- Create User
+- Get All Users
+- Get User By ID
+- Get User By Name
+- Get User By Email
+- Get Users By City
+- Update User
+- Delete User
 
 ---
 
@@ -25,18 +51,18 @@ The application allows users to manage database records using both REST APIs and
 
 Integrated Spring AI with Groq API to enable natural language interaction with the database.
 
-Supported AI Operations:
+### Supported AI Operations
 
-* Get User By ID
-* Get User By Name
-* Get User By Email
-* Get Users By City
-* Get All Users
-* Create User
-* Update User
-* Delete User
+- Get User By ID
+- Get User By Name
+- Get User By Email
+- Get Users By City
+- Get All Users
+- Create User
+- Update User
+- Delete User
 
-Example Prompts:
+### Example Prompts
 
 ```text
 get user with id 2
@@ -62,14 +88,14 @@ add user with name Ryan email ryan@gmail.com age 25 city Delhi password 1234
 
 Implemented conversation-based memory using Spring AI Chat Memory.
 
-Features:
+### Features
 
-* Maintains context across multiple prompts
-* Supports conversation-specific memory
-* Uses Conversation ID for session tracking
-* Enables follow-up questions
+- Maintains conversation context
+- Conversation-specific memory
+- Uses Conversation ID
+- Supports follow-up questions
 
-Example:
+### Example
 
 ```text
 Conversation ID = abc123
@@ -89,38 +115,38 @@ The AI remembers the previously discussed user within the same conversation.
 
 Implemented secure JWT-based authentication.
 
-Features:
+### Features
 
-* User Registration
-* Login API
-* JWT Token Generation
-* Protected APIs
-* Stateless Authentication
-* Secure AI Endpoints
+- User Registration
+- Login API
+- JWT Token Generation
+- Protected APIs
+- Stateless Authentication
+- Secure AI Endpoints
 
 Protected APIs require:
 
 ```text
-Authorization: Bearer <jwt_token>
+Authorization: Bearer <JWT_TOKEN>
 ```
 
 ---
 
 ## DTO Architecture
 
-Implemented:
+Implemented DTOs:
 
-* UserRequestDto
-* UserResponseDto
-* LoginRequestDto
-* AuthResponseDto
+- UserRequestDto
+- UserResponseDto
+- LoginRequestDto
+- AuthResponseDto
 
-Benefits:
+### Benefits
 
-* Cleaner API structure
-* Better security
-* Validation support
-* Separation of concerns
+- Clean API Design
+- Better Security
+- Validation Support
+- Separation of Concerns
 
 ---
 
@@ -128,34 +154,36 @@ Benefits:
 
 Implemented:
 
-* Request validation using Jakarta Validation
-* Global exception handling using @RestControllerAdvice
+- Jakarta Validation
+- Global Exception Handling using `@RestControllerAdvice`
 
-Handled exceptions:
+Handled Exceptions:
 
-* Resource Not Found
-* Validation Errors
-* Authentication Errors
-* AI Tool Errors
-* AI Rate Limit Errors
-* General Exceptions
+- Resource Not Found
+- Validation Errors
+- Authentication Errors
+- AI Tool Errors
+- AI Rate Limit Errors
+- General Exceptions
 
 ---
 
 ## Redis Caching
 
-Integrated Redis caching for optimized performance.
+Redis caching is supported for local development.
 
-Cached APIs:
+### Cached APIs
 
-* Get User By ID
-* Get User By Name
-* Get User By Email
+- Get User By ID
+- Get User By Name
+- Get User By Email
 
-Benefits:
+### Benefits
 
-* Faster API responses
-* Reduced database load
+- Faster API Responses
+- Reduced Database Load
+
+> Redis caching is disabled in the Render deployment to simplify free cloud hosting.
 
 ---
 
@@ -163,55 +191,65 @@ Benefits:
 
 Swagger UI integrated for API testing.
 
-Local:
+### Local
 
 ```text
 http://localhost:8080/swagger-ui/index.html
 ```
 
----
-
-## Railway Deployment
-
-Application successfully deployed on Railway.
-
-Cloud Features:
-
-* Public API access
-* H2 database support for deployment
-* Environment variable configuration
-* Groq API integration
-
-Deployment URL:
+### Live
 
 ```text
-https://spring-ai-mcp-user-management-production.up.railway.app
+https://spring-ai-mcp-user-management.onrender.com/swagger-ui/index.html
 ```
 
-Swagger URL:
+---
+
+# Docker & Render Deployment
+
+The application is containerized using Docker and deployed on Render.
+
+### Cloud Features
+
+- Dockerized Spring Boot Application
+- Public API Access
+- H2 Database for Cloud Deployment
+- Environment Variable Configuration
+- Groq API Integration
+- Automatic GitHub Deployments
+- Free Cloud Hosting via Render
+
+### Deployment URL
 
 ```text
-https://spring-ai-mcp-user-management-production.up.railway.app/swagger-ui/index.html
+https://spring-ai-mcp-user-management.onrender.com
+```
+
+### Swagger URL
+
+```text
+https://spring-ai-mcp-user-management.onrender.com/swagger-ui/index.html
 ```
 
 ---
 
 # Tech Stack
 
-* Java 17
-* Spring Boot 3.4.5
-* Spring AI
-* Groq API
-* Spring Security
-* JWT Authentication
-* PostgreSQL
-* H2 Database
-* Redis / Memurai
-* Spring Data JPA
-* Maven
-* Swagger OpenAPI
-* Railway
-* Lombok
+- Java 17
+- Spring Boot 3.4.5
+- Spring AI
+- Groq API
+- Spring Security
+- JWT Authentication
+- PostgreSQL
+- H2 Database
+- Redis / Memurai (Local Development)
+- Spring Data JPA
+- Maven
+- Swagger OpenAPI
+- Docker
+- Render
+- Lombok
 
 ---
 
@@ -238,7 +276,7 @@ src/main/java/com/springai/MCPServer
 ## 1. Clone Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/aakankshanidhi/spring-ai-mcp-user-management.git
 ```
 
 ---
@@ -274,7 +312,7 @@ spring.ai.openai.chat.options.model=llama-3.3-70b-versatile
 
 ---
 
-## 4. Configure Redis
+## 4. Configure Redis (Optional)
 
 ```properties
 spring.data.redis.host=localhost
@@ -291,11 +329,29 @@ mvn spring-boot:run
 
 ---
 
+# Docker
+
+## Build Docker Image
+
+```bash
+docker build -t spring-ai-mcp-user-management .
+```
+
+## Run Docker Container
+
+```bash
+docker run -p 8080:8080 \
+-e GROQ_API_KEY=YOUR_GROQ_API_KEY \
+spring-ai-mcp-user-management
+```
+
+---
+
 # Authentication APIs
 
 ## Register User
 
-POST
+**POST**
 
 ```text
 /api/users
@@ -305,13 +361,13 @@ POST
 
 ## Login
 
-POST
+**POST**
 
 ```text
 /auth/login
 ```
 
-Returns:
+Response:
 
 ```json
 {
@@ -323,40 +379,43 @@ Returns:
 
 # AI Endpoint
 
-GET
+**GET**
 
 ```text
-/ai
+/ai/chat
 ```
 
-Parameters:
+### Parameters
 
 ```text
 prompt
 conversationId
 ```
 
-Example:
+### Example
 
 ```text
-/ai?conversationId=abc123&prompt=get user with id 1
+/ai/chat?conversationId=abc123&prompt=get user with id 1
 ```
 
 ---
 
 # Future Enhancements
 
-* Vector Database Integration
-* Embeddings
-* MCP Tool Chaining
-* Role-Based Access Control (RBAC)
-* Pagination & Sorting
-* Dockerization
-* Unit & Integration Testing
-* Kubernetes Deployment
+- PostgreSQL Cloud Database
+- Redis Cloud Integration
+- Vector Database Integration
+- Embeddings & RAG
+- MCP Tool Chaining
+- Role-Based Access Control (RBAC)
+- Pagination & Sorting
+- Unit & Integration Testing
+- Docker Compose
+- Kubernetes Deployment
+- CI/CD using GitHub Actions
 
 ---
 
 # Author
 
-Aakanksha Nidhi
+**Aakanksha Nidhi**
